@@ -150,13 +150,17 @@ a:focus {
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    padding: 0 10px;
+    padding: 5vh 10px 0 10px;
+  }
+
+  .header {
+    margin-top: 5vh;
   }
 
   .box {
     width: 100%;
     padding: 20px 18px 40px 18px;
-    margin: 10vh auto; /* Centered vertically with 10% top/bottom space */
+    margin: 12vh auto 8vh auto;
   }
 
   .paragraph {
