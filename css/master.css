@@ -1,5 +1,5 @@
 body {
-    font-family: "Marcellus", serif;
+   font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     background-image: url(../images/fogtree.jpg);
@@ -18,7 +18,12 @@ body {
 }
 
 .title {
-    text-align: center;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Climate Crisis', sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
 }
 
 .information {
@@ -162,9 +167,8 @@ a:focus {
   }
 
   .title {
-    font-size: 4rem; /* about twice as big */
+    font-size: 3rem;
     text-align: center;
-    flex-shrink: 0;
   }
 
   .box {
@@ -186,14 +190,14 @@ a:focus {
   }
 
   .connect {
-    font-size: 2rem; /* larger */
+    font-size: 1.5rem; /* larger */
     text-align: center;
     flex-shrink: 0;
     margin-bottom: 10px;
   }
 
   .email {
-    font-size: 1.4rem; /* larger */
+    font-size: 1.5rem; /* larger */
     text-align: center;
     flex-shrink: 0;
   }
