@@ -1,6 +1,6 @@
 body {
-   font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
     font-style: normal;
     background-image: url(../images/fogtree.jpg);
     background-attachment: fixed;
@@ -13,14 +13,14 @@ body {
   }
 
 .header {
-    padding-top: 10%;
+    padding-top: 15vh;
     color: rgb(1, 68, 33);
 }
 
 .title {
   text-align: center;
   font-size: 2.5rem;
-  font-family: 'Climate Crisis', sans-serif;
+  font-family: 'Limelight', cursive;
   animation: fadeIn 1.5s ease-in-out;
   animation-delay: 0.2s;
   animation-fill-mode: both;
@@ -47,7 +47,8 @@ body {
     cursor: pointer;
     color: rgb(1, 68, 33);
     word-break: break-word;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: .5cap;
 }
 
 .email:hover {
@@ -97,7 +98,7 @@ body {
 @keyframes fadeIn {
     0% {
       opacity: 0;
-      transform: translateY(20px); /* optional: slight upward movement */
+      transform: translateY(20px);
     }
     100% {
       opacity: 1;
@@ -105,10 +106,11 @@ body {
     }
   }
 
-.social-links {
+  .social-links {
     text-align: center;
     font-size: 1rem;
     margin-top: 20px;
+    padding-bottom: 20px; /* ✨ This adds space beneath the links */
   }
   
   .social-links a {
