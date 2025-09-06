@@ -1,3 +1,10 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
@@ -12,7 +19,6 @@ body {
   min-height: 100vh;
 }
 
-/* Header / Hero */
 .header {
   padding-top: 15vh;
   color: rgb(1, 68, 33);
@@ -49,7 +55,7 @@ body {
   transition-property: background, transform, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease;
-  margin-top: 0;
+  margin-top: 15px; /* space under connect */
   animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -59,18 +65,23 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Main Content */
 .main {
   color: white;
   flex: 1;
 }
 
+.box,
+.services,
+.footer {
+  width: 100%;
+  max-width: 75%;   /* consistent container size */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
 .box {
   background-color: rgba(0, 12, 0, 0.6);
-  width: 75%;
-  margin: 10% auto 0 auto;
-  padding: 10px 20px;
-  border-radius: 20px;
   animation: fadeIn 1.5s ease-in-out;
   animation-delay: 0.3s;
   animation-fill-mode: both;
@@ -98,14 +109,12 @@ body {
 
 .services {
   text-align: center;
-  margin-top: 20px;
-  padding: 15px;
   background: linear-gradient(135deg, #0005028d, #000502b8);
   border-left: 4px solid #01241d;
-  border-radius: 8px;
+  border-right: 4px solid #01241d;
   font-size: 1.1em;
   color: rgb(255, 255, 255);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   animation: fadeIn 1.5s ease-in-out;
   animation-delay: 0.3s;
   animation-fill-mode: both;
@@ -115,7 +124,17 @@ body {
   color: rgb(255, 255, 255);
 }
 
-/* Social Links */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .social-links {
   text-align: center;
   font-size: 1rem;
@@ -135,31 +154,20 @@ body {
   transition: all 0.2s ease;
 }
 
-/* Footer */
+.img {
+  width: 40px;
+  margin: 10px 5px;
+}
+
 .footer {
   text-align: center;
   font-size: 0.9rem;
   color: white;
-  margin-top: 40px;
-  padding: 20px 10px;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
+@media (max-width: 768px){
   body {
     background-attachment: scroll;
   }
@@ -171,28 +179,15 @@ body {
     background-position: top left;
     background-repeat: repeat-x;
     background-attachment: scroll;
-    overflow-x: auto;
-    width: max-content;
+    overflow-x: hidden;
     padding: 5vh 10px 0 10px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
 
-  .box,
-  .footer,
-  .main {
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
-
-  html {
-    overflow-x: auto;
-  }
-
   .header {
     margin-top: 5vh;
-    flex-shrink: 0;
   }
 
   .title {
@@ -200,14 +195,12 @@ body {
     text-align: center;
   }
 
-  .box {
-    width: 100%;
-    padding: 20px 18px 80px 18px;
-    margin: auto;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .box,
+  .services,
+  .footer {
+    max-width: 100%;
+    padding: 20px;
+    margin: 10px auto;
   }
 
   .paragraph {
@@ -220,23 +213,10 @@ body {
 
   .connect {
     font-size: 1.5rem;
-    text-align: center;
-    flex-shrink: 0;
     margin-bottom: 10px;
   }
 
   .footer {
-    flex-shrink: 0;
     padding: 20px 10px;
-  }
-
-  .hero-content {
-    padding: 40px 15px 30px;
-  }
-
-  .cta-button {
-    width: 100%;
-    max-width: 300px;
-    padding: 14px;
   }
 }
