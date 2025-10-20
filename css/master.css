@@ -242,7 +242,7 @@ body {
 ----------------------------- */
 @media (max-width: 768px) {
   body {
-    background-image: url('../images/whiskey3.jpeg');
+    background-image: url('../images/whiskey1.jpeg');
     background-attachment: scroll;
     background-size: cover;
     background-position: center center;
