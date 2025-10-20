@@ -1,3 +1,6 @@
+// -----------------------------
+// Packages Fade-In on Scroll
+// -----------------------------
 const packages = document.querySelectorAll('.package');
 
 function checkPackages() {
@@ -10,5 +13,18 @@ function checkPackages() {
   });
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  checkPackages();
+});
 window.addEventListener('scroll', checkPackages);
-window.addEventListener('load', checkPackages);
+
+// -----------------------------
+// CTA Button Pulse Animation
+// -----------------------------
+window.addEventListener('DOMContentLoaded', () => {
+  const ctaButton = document.querySelector('.cta-button');
+  if (ctaButton) {
+    ctaButton.classList.add('pulse');
+    setTimeout(() => { ctaButton.classList.remove('pulse'); }, 3000);
+  }
+});
