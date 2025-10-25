@@ -11,6 +11,37 @@
 
   <!-- Favicon -->
   <link rel="icon" href="images/paw.png" type="image/png">
+
+  <!-- Client Connect Section Styles -->
+  <style>
+    /* Client Connect Section */
+    .client-connect {
+      background-color: #fefcfb; /* Soft cream background */
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 2px solid #e6e2df;
+      border-bottom: 2px solid #e6e2df;
+    }
+
+    .client-connect h2 {
+      font-family: 'Limelight', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #2c2c2c;
+    }
+
+    .client-connect p {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    #client-connect-widget {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+  </style>
 </head>
 
 <body>
@@ -73,14 +104,28 @@
       </div>
     </section>
 
-    <!-- Client Connect Section -->
+    <!-- Client Connect Widget Section -->
     <section class="client-connect">
-      <h2>Client Portal</h2>
-      <p>Access your projects and updates here</p>
-      <div class="client-connect-overlay">
-        <div id="client-connect-widget"></div>
-      </div>
+      <h2 class="welcome">Client Portal</h2>
+      <p>Log in below to view, approve, and provide feedback on your social media posts.</p>
+      <div id="client-connect-widget"></div>
+      <script>
+      !function(){
+        var e=document,
+            t=e.createElement("iframe");
+        window.addEventListener("message",function(e){
+          if(!e || !e.data || !e.data.height){return;}
+          t.height=(parseInt(e.data.height, 10)+45)+"px"
+        },!1),
+        t.style.border="0",
+        t.style.width="100%",
+        t.id="client-connect-iframe",
+        t.src="https://api.sendible.com/api/v2/client_connect_widget.json?id=3360",
+        e.getElementById("client-connect-widget").appendChild(t)
+      }();
+      </script>
     </section>
+
   </main>
 
   <!-- Footer -->
