@@ -31,81 +31,84 @@
   </header>
 
   <!-- Main Content -->
-  <main class="main">
-    <!-- Welcome Box -->
-    <div class="box">
-      <h2 class="welcome">Welcome</h2>
-      <div class="paragraph">
-        <p>A tuxedo cat and a mini schnauzer, adventuring one paw at a time.</p>
-        <p>Behind the screen, I’m Geraldine — the creative behind Whiskey & Wasabi LLC. I help small businesses grow through thoughtful storytelling, engaging Instagram content, and clean, responsive design.</p>
-        <p>I make social media simple so you can focus on what you do best.</p>
-      </div>
-      <div class="social-links">
-        <a href="https://instagram.com/whiskeyandwasabi" target="_blank" rel="noopener">Instagram</a> |
-        <a href="https://youtube.com/@whiskeyandwasabi" target="_blank" rel="noopener">YouTube</a> |
-        <a href="https://www.linkedin.com/in/geraldine-montellanos-722b462b3" target="_blank" rel="noopener">LinkedIn</a>
+<main class="main">
+
+  <!-- Welcome Box -->
+  <div class="box">
+    <h2 class="welcome">Welcome</h2>
+    <div class="paragraph">
+      <p>A tuxedo cat and a mini schnauzer, adventuring one paw at a time.</p>
+      <p>Behind the screen, I’m Geraldine — the creative behind Whiskey & Wasabi LLC. I help small businesses grow through thoughtful storytelling, engaging Instagram content, and clean, responsive design.</p>
+      <p>I make social media simple so you can focus on what you do best.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://instagram.com/whiskeyandwasabi" target="_blank" rel="noopener">Instagram</a> |
+      <a href="https://youtube.com/@whiskeyandwasabi" target="_blank" rel="noopener">YouTube</a> |
+      <a href="https://www.linkedin.com/in/geraldine-montellanos-722b462b3" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="services-container">
+      <h2 class="welcome">Instagram Management</h2>
+      <p class="paragraph subtext">Strategy, content planning, captions, hashtags, and engagement made simple.</p>
+      <div class="packages">
+
+        <!-- Box 1 -->
+        <div class="package highlight">
+          <div class="badge">Most Popular</div>
+          <h3>Custom Content Creation</h3>
+          <p>Starting at $35 per piece (photo, carousel, or short-form video — captions included)</p>
+          <p class="package-note">Every piece crafted with storytelling and care — add as many pieces as you like.</p>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="package">
+          <h3>Content Management Add-Ons</h3>
+          <p>Posting & Scheduling: +$100/month<br>
+             Engagement: +$100/month<br>
+             Analytics: +$100/month<br>
+             Bundle all three for $250/month</p>
+          <p class="package-note">Peace of mind — everything taken care of so you can focus on your business.</p>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="package">
+          <h3>Monthly Flow</h3>
+          <p>Payment due by the 25th each month<br>
+             Services begin on the 1st of the month<br>
+             Content reviewed + approved before posting</p>
+          <p class="package-note">Custom, clear, and consistent — made to support your business beautifully.</p>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <!-- Services Section -->
-    <section class="services">
-      <div class="services-container">
-        <h2 class="welcome">Instagram Management</h2>
-        <p class="paragraph subtext">Custom content creation and support for your social media — flexible and clear pricing.</p>
-        
-        <div class="packages">
-          <!-- Box 1 -->
-          <div class="package highlight">
-            <div class="badge">Most Popular</div>
-            <h3>Custom Content</h3>
-            <p>Photo, carousel, or short-form video — captions included</p>
-            <p class="price">$35 per content piece</p>
-            <p>Flexible number of posts tailored to your monthly goals.</p>
-          </div>
+  <!-- Client Connect Widget Section -->
+  <section class="client-connect">
+    <h2 class="welcome">Client Portal</h2>
+    <p>Log in below to view, approve, and provide feedback on your social media posts.</p>
+    <div id="client-connect-widget"></div>
+    <script>
+      !function(){
+        var e=document,
+            t=e.createElement("iframe");
+        window.addEventListener("message",function(e){
+          if(!e || !e.data || !e.data.height){return;}
+          t.height=(parseInt(e.data.height, 10)+45)+"px"
+        },!1),
+        t.style.border="0",
+        t.style.width="100%",
+        t.id="client-connect-iframe",
+        t.src="https://api.sendible.com/api/v2/client_connect_widget.json?id=3360",
+        e.getElementById("client-connect-widget").appendChild(t)
+      }();
+    </script>
+  </section>
 
-          <!-- Box 2 -->
-          <div class="package">
-            <h3>Content Management Add-Ons</h3>
-            <p>Posting & Scheduling: +$100/month</p>
-            <p>Engagement: +$100/month</p>
-            <p>Analytics: +$100/month</p>
-            <p>Or bundle all three for $250/month</p>
-          </div>
-
-          <!-- Box 3 -->
-          <div class="package">
-            <h3>Monthly Flow</h3>
-            <p>Payment due by the 25th each month</p>
-            <p>Services begin on the 1st of the month</p>
-            <p>Content reviewed + approved before posting</p>
-            <p>Custom, clear, and consistent — made to support your business beautifully.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   <!-- Client Connect Widget Section -->
-<section class="client-connect">
-  <h2 class="welcome">Client Portal</h2>
-  <p>Log in below to view, approve, and provide feedback on your social media posts.</p>
-  <div id="client-connect-widget"></div>
-  <script>
-    !function(){
-      var e=document,
-          t=e.createElement("iframe");
-      window.addEventListener("message",function(e){
-        if(!e || !e.data || !e.data.height){return;}
-        t.height=(parseInt(e.data.height, 10)+45)+"px"
-      },!1),
-      t.style.border="0",
-      t.style.width="100%",
-      t.id="client-connect-iframe",
-      t.src="https://api.sendible.com/api/v2/client_connect_widget.json?id=3360",
-      e.getElementById("client-connect-widget").appendChild(t)
-    }();
-  </script>
-</section>
-  </main>
+</main>
 
   <!-- Footer -->
   <footer class="footer">
