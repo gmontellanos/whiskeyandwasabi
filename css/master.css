@@ -34,7 +34,6 @@ body {
   font-family: 'Limelight', cursive;
   font-size: 2.5rem;
   animation: fadeIn 1.5s ease-in-out;
-  animation-delay: 0.2s;
   animation-fill-mode: both;
 }
 
@@ -67,6 +66,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* CTA Pulse Animation */
 @keyframes pulseEffect {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
@@ -80,7 +80,9 @@ body {
 /* -----------------------------
    Main Content
 ----------------------------- */
-.main { flex: 1; }
+.main {
+  flex: 1;
+}
 
 .box, .services, .footer {
   width: 100%;
@@ -110,7 +112,9 @@ body {
   text-align: center;
 }
 
-.paragraph p { margin-bottom: 1rem; }
+.paragraph p {
+  margin-bottom: 1rem;
+}
 
 .paragraph.subtext {
   font-size: 0.95rem;
@@ -143,7 +147,7 @@ body {
 }
 
 /* -----------------------------
-   Services Section
+   Services Section & Packages
 ----------------------------- */
 .services {
   background-color: rgba(0, 12, 0, 0.6);
@@ -172,7 +176,8 @@ body {
   padding: 20px 15px;
   width: 250px;
   border-radius: 20px;
-  transition: transform 0.2s, box-shadow 0.2s, opacity 0.6s, transform 0.6s;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
   opacity: 0;
   transform: translateY(20px);
 }
@@ -200,23 +205,32 @@ body {
   text-transform: uppercase;
 }
 
-.package h3 { font-size: 1.25rem; font-weight: 300; margin-bottom: 10px; }
-.package p { margin: 5px 0; }
-.package .price { font-weight: 600; margin-top: 10px; }
+.package h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.package p {
+  margin: 5px 0;
+}
+
+.package .price {
+  font-weight: 600;
+  margin-top: 10px;
+}
 
 .package.highlight {
   background: linear-gradient(135deg, #014421b5, #026d36bb);
   border: 2px solid #fff;
 }
 
-.package.highlight:hover {
-  background: linear-gradient(135deg, #026d36, #014421);
-}
-
 .package.highlight h3,
 .package.highlight .badge,
 .package.highlight p,
-.package.highlight .price { color: white; }
+.package.highlight .price {
+  color: white;
+}
 
 /* -----------------------------
    Footer
@@ -237,6 +251,33 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* -----------------------------
+   Media Queries
+----------------------------- */
+@media (max-width: 768px) {
+  .packages {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .package {
+    width: 90%;
+    padding: 18px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .package {
+    width: 95%;
+    padding: 15px 10px;
+  }
+  .welcome {
+    font-size: 1.5rem;
+  }
+  .paragraph {
+    font-size: 1rem;
+  }
+}
 /* -----------------------------
    Client Connect Section
 ----------------------------- */
@@ -278,38 +319,4 @@ body {
 #client-connect-iframe:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* -----------------------------
-   Media Queries
------------------------------ */
-@media (max-width: 768px) {
-  body {
-    background-image: url('../images/whiskey1.jpeg');
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  .packages { flex-direction: column; align-items: center; gap: 20px; }
-  .package { width: 90%; padding: 18px 12px; }
-  .header { margin-top: 5vh; }
-  .title { font-size: 2.2rem; }
-  .box, .services, .footer { max-width: 100%; padding: 20px; margin: 10px auto; }
-  .client-connect { padding: 40px 15px; }
-  .client-connect h2 { font-size: 2rem; }
-  #client-connect-widget { max-width: 100%; }
-}
-
-@media (max-width: 600px) {
-  body { background-size: cover; background-position: center top; padding: 5vh 10px 0 10px; overflow-x: hidden; min-height: 100vh; }
-  .paragraph { font-size: 1rem; }
-  .welcome { font-size: 1.5rem; }
-  .connect { font-size: 1.5rem; margin-bottom: 10px; }
-  .package { width: 95%; padding: 15px 10px; }
-  .footer { padding: 20px 10px; }
-  .client-connect { padding: 30px 10px; }
-  .client-connect h2 { font-size: 1.75rem; }
-  .client-connect p { font-size: 0.95rem; }
 }
