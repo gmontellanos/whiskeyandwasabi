@@ -243,48 +243,7 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* -----------------------------
-   Client Connect Section
------------------------------ */
-.client-connect {
-  background-color: #fefcfb;
-  padding: 50px 20px;
-  text-align: center;
-  border-top: 2px solid #e6e2df;
-  border-bottom: 2px solid #e6e2df;
-  border-radius: 20px;
-  margin: 40px auto;
-}
 
-.client-connect h2 {
-  font-family: 'Limelight', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #2c2c2c;
-}
-
-.client-connect p {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 25px;
-}
-
-#client-connect-widget {
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-#client-connect-iframe {
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#client-connect-iframe:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
 
 /* -----------------------------
    Media Queries

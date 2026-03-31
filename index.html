@@ -94,27 +94,6 @@
     </div>
   </section>
 
-  <!-- Client Connect Widget Section -->
-  <section class="client-connect">
-    <h2 class="welcome">Client Portal</h2>
-    <p>Log in below to view, approve, and provide feedback on your social media posts.</p>
-    <div id="client-connect-widget"></div>
-    <script>
-      !function(){
-        var e=document,
-            t=e.createElement("iframe");
-        window.addEventListener("message",function(e){
-          if(!e || !e.data || !e.data.height){return;}
-          t.height=(parseInt(e.data.height, 10)+45)+"px"
-        },!1),
-        t.style.border="0",
-        t.style.width="100%",
-        t.id="client-connect-iframe",
-        t.src="https://api.sendible.com/api/v2/client_connect_widget.json?id=3360",
-        e.getElementById("client-connect-widget").appendChild(t)
-      }();
-    </script>
-  </section>
 
 </main>
 
