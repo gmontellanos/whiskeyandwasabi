@@ -19,12 +19,22 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('scroll', checkPackages);
 
 // -----------------------------
-// CTA Button Pulse Animation
+// CTA Button Pulse Animation (ALL buttons)
 // -----------------------------
 window.addEventListener('DOMContentLoaded', () => {
-  const ctaButton = document.querySelector('.cta-button');
-  if (ctaButton) {
-    ctaButton.classList.add('pulse');
-    setTimeout(() => { ctaButton.classList.remove('pulse'); }, 3000);
-  }
+  const buttons = document.querySelectorAll('.cta-button');
+
+  buttons.forEach((btn, index) => {
+    setTimeout(() => {
+      btn.classList.add('pulse');
+
+      btn.addEventListener(
+        'animationend',
+        () => {
+          btn.classList.remove('pulse');
+        },
+        { once: true }
+      );
+    }, index * 250);
+  });
 });

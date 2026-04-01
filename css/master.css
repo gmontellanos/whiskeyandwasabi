@@ -54,17 +54,28 @@ body {
   background: linear-gradient(135deg, #014421b5, #026d36bb);
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 600;
   margin-top: 15px;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    letter-spacing 0.25s ease;
   animation: fadeIn 1.5s ease-in-out;
+  will-change: transform;
 }
 
 .cta-button:hover {
   background: linear-gradient(135deg, #026d36, #014421);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  letter-spacing: 0.3px;
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
 }
 
 @keyframes pulseEffect {
@@ -91,8 +102,9 @@ body {
 }
 
 .box {
-  background-color: rgba(0, 12, 0, 0.6);
-  animation: fadeIn 1.5s ease-in-out;
+  background-color: rgba(0, 12, 0, 0.58);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .welcome {
@@ -118,7 +130,7 @@ body {
   max-width: 500px;
   margin: 0 auto 35px auto;
   line-height: 1.5;
-  color: white;
+  color: rgb(1, 35, 18);
 }
 
 /* -----------------------------
@@ -136,21 +148,18 @@ body {
   margin: 0 10px;
   transition: all 0.2s ease;
 }
-
 .social-links a:hover {
-  color: rgb(182,182,70);
-  letter-spacing: 0.5px;
+  color: rgb(200, 196, 110);
+  letter-spacing: 0.25px;
 }
 
 /* -----------------------------
    Services Section
 ----------------------------- */
 .services {
-  background-color: rgba(0, 12, 0, 0.6);
-  padding: 60px 20px;
-  text-align: center;
-  border-radius: 20px;
-  animation: fadeIn 1.5s ease-in-out;
+  background-color: rgba(0, 12, 0, 0.58);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .services-container h2.welcome {
@@ -168,23 +177,26 @@ body {
 
 .package {
   background-color: rgba(1, 68, 33, 0.6);
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 20px 15px;
+  border: 1px solid rgba(255,255,255,0.22);
+  padding: 24px 18px;
   width: 250px;
-  border-radius: 20px;
-  transition: transform 0.2s, box-shadow 0.2s, opacity 0.6s, transform 0.6s;
+  border-radius: 22px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.8s ease,
+    border-color 0.35s ease;
   opacity: 0;
   transform: translateY(20px);
+}
+
+.package:hover {
+  border-color: rgba(255,255,255,0.38);
 }
 
 .package.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.package:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .package .badge {
@@ -238,11 +250,24 @@ body {
 /* -----------------------------
    Animations
 ----------------------------- */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(2, 109, 54, 0.18);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(2, 109, 54, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(2, 109, 54, 0);
+  }
 }
 
+.cta-button.pulse {
+  animation: pulseEffect 1.4s ease-out 1;
+}
 
 
 /* -----------------------------
@@ -287,4 +312,106 @@ body {
   .client-connect { padding: 30px 10px; }
   .client-connect h2 { font-size: 1.75rem; }
   .client-connect p { font-size: 0.95rem; }
+}
+/* -----------------------------
+   Video Grid (Case Study)
+----------------------------- */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.video-card {
+  background-color: rgba(1, 68, 33, 0.6);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.video-card h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+}
+
+.video-card p {
+  font-size: 0.9rem;
+}
+
+.italic {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* -----------------------------
+   Two Column Layout
+----------------------------- */
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.two-columns p {
+  margin: 6px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+/* -----------------------------
+   Before / After Section
+----------------------------- */
+.before-after {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: 30px auto 0 auto;
+}
+.ba-card {
+  background-color: rgba(1, 68, 33, 0.5);
+  border-radius: 20px;
+  padding: 22px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.ba-card h3 {
+  margin-bottom: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.ba-card p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .before-after {
+    grid-template-columns: 1fr;
+  }
 }
