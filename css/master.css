@@ -70,7 +70,7 @@ a {
    Header / Hero Section
 ----------------------------- */
 .header {
-  padding-top: 15vh;
+  padding-top: 6vh;
   color: rgb(1, 68, 33);
   text-align: center;
 }
@@ -601,7 +601,7 @@ a {
   }
 
   .header {
-    margin-top: 5vh;
+    margin-top: 6vh;
   }
 
   .title {
