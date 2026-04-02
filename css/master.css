@@ -78,6 +78,13 @@ body {
   will-change: transform;
 }
 
+.data-line {
+  color: #026d36;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  opacity: 0.9;
+}
+
 .cta-button:hover {
   background: linear-gradient(135deg, #026d36, #014421);
   transform: translateY(-2px);
