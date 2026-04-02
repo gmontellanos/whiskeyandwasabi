@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   background-image: url('../images/fogtree.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -19,6 +19,18 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: white;
+}
+
+/* -----------------------------
+   Italic Text (Improved Readability)
+----------------------------- */
+.italic,
+.paragraph em,
+.package-note {
+  font-style: italic;
+  color: #ffffff;
+  font-weight: 400;
+  opacity: 0.95;
 }
 
 /* -----------------------------
@@ -110,7 +122,7 @@ body {
 .welcome {
   text-align: center;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -120,9 +132,12 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: center;
+  font-weight: 400;
 }
 
-.paragraph p { margin-bottom: 1rem; }
+.paragraph p {
+  margin-bottom: 1rem;
+}
 
 .paragraph.subtext {
   font-size: 0.95rem;
@@ -130,7 +145,8 @@ body {
   max-width: 500px;
   margin: 0 auto 35px auto;
   line-height: 1.5;
-  color: rgb(1, 35, 18);
+  color: rgb(122, 168, 144);
+  font-weight: 300;
 }
 
 /* -----------------------------
@@ -212,8 +228,16 @@ body {
   text-transform: uppercase;
 }
 
-.package h3 { font-size: 1.25rem; font-weight: 300; margin-bottom: 10px; }
-.package p { margin: 5px 0; }
+.package h3 { 
+  font-size: 1.25rem; 
+  font-weight: 300; 
+  margin-bottom: 10px; 
+}
+
+.package p { 
+  margin: 6px 0;
+  font-weight: 400; 
+}
 .package .price { font-weight: 600; margin-top: 10px; }
 
 .package .package-note {
