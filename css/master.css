@@ -171,6 +171,27 @@ a {
   flex-wrap: wrap;
   justify-content: center;
 }
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-note {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: rgb(1, 68, 33);
+  opacity: 0.95;
+}
+
+.hero-note a {
+  text-decoration: underline;
+}
+
+.hero-note a:hover {
+  color: rgb(2, 109, 54);
+}
 
 /* -----------------------------
    Main Content
@@ -706,5 +727,17 @@ a {
     width: fit-content;
     margin-top: 25px;
     margin-bottom: 18px;
+  }
+  @media (max-width: 600px) {
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-note {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
   }
 }
