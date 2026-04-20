@@ -5,9 +5,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDQJ1QML62"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-TDQJ1QML62');
   </script>
@@ -17,53 +15,72 @@
   <title>Whiskey &amp; Wasabi</title>
 
   <link rel="stylesheet" href="css/master.css">
-  <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="icon" href="images/paw.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
 <body>
-  <!-- Hidden image for accessibility -->
-  <img
-    src="images/fogtree.jpg"
-    alt="Whiskey and Wasabi sitting on rocks at Lake Tahoe with lake and trees in the background"
-    style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;"
-  >
 
-  <!-- Header / Hero Section -->
+  <!-- Nav -->
+  <nav class="nav">
+    <span class="nav-logo">Whiskey &amp; Wasabi</span>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="pretty-litter.html">Work</a></li>
+      <li><a href="#welcome">About</a></li>
+    </ul>
+    <a href="https://forms.gle/uVd5QnZuafFzriWk8" target="_blank" rel="noopener" class="nav-cta">Start Your Audit</a>
+  </nav>
+
+  <!-- Hero -->
   <header class="header">
-    <h1 class="title">Whiskey &amp; Wasabi</h1>
+    <div class="hero-split">
 
-    <div class="hero-content">
-      <p class="connect">Audience-Driven Content Strategy</p>
+      <div class="hero-text">
+        <div class="tag-pill">
+          <span class="dot"></span> Content Strategy Studio
+        </div>
+        <span class="eyebrow">For Small Businesses &amp; Personal Brands</span>
+        <h1>Where strategy<br>meets <em>creative</em><br>clarity.</h1>
+        <p class="hero-sub">
+          I help small businesses, service providers, and personal brands stop guessing
+          what to post — and start creating content that actually resonates.
+          Research-backed. Audience-first. Built to connect.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://forms.gle/uVd5QnZuafFzriWk8" target="_blank" rel="noopener" class="btn-primary">Start Your Audit</a>
+          <a href="pretty-litter.html" class="btn-ghost">View Sample Work →</a>
+        </div>
+        <div class="momentum-note">
+          <span class="momentum-dot"></span>
+          Currently building a 30-day content plan for a carpentry brand in New Orleans.
+        </div>
+        <p class="hero-note">
+          Not sure if this is right for you?
+          <a href="mailto:info@whiskeyandwasabi.com?subject=Quick%20Question">Send me a quick message.</a>
+        </p>
+      </div>
 
-      <div class="hero-buttons">
-        <a
-          href="https://forms.gle/uVd5QnZuafFzriWk8"
-          target="_blank"
-          rel="noopener"
-          class="cta-button"
-        >
-          Start Your Audit
-        </a>
+      <div class="hero-photo">
+        <!-- Save your headshot as images/geraldine.jpg -->
+        <img src="images/geraldine.jpg" alt="Geraldine Montellanos — Creative Strategist">
+        <div class="name-tag">
+          <strong>Geraldine Montellanos</strong>
+          <span>Creative Strategist</span>
+        </div>
+      </div>
 
-        <a href="pretty-litter.html" class="cta-button">View Sample Audit</a>      </div>
-
-      <p class="hero-note">
-        Not sure if this is right for you?
-        <a href="mailto:info@whiskeyandwasabi.com?subject=Quick%20Question">Send me a quick message.</a>
-      </p>
     </div>
   </header>
 
   <!-- Main Content -->
   <main class="main">
-    <!-- Welcome Box -->
-    <section class="box">
-      <h2 class="welcome">Welcome</h2>
 
+    <!-- Welcome -->
+    <section class="box" id="welcome">
+      <h2 class="section-title">Welcome</h2>
       <div class="paragraph">
-        <p>I’m Geraldine — a creative strategist behind Whiskey &amp; Wasabi LLC.</p>
+        <p>I'm Geraldine — a creative strategist behind Whiskey &amp; Wasabi LLC.</p>
         <p>
           I help brands understand what content will resonate with their audience through
           research, performance insight, and intentional creative direction.
@@ -73,101 +90,77 @@
           why it works, and what to do next.
         </p>
       </div>
-
       <div class="social-links">
-        <a href="https://instagram.com/geraldinemontellanos" target="_blank" rel="noopener">Instagram</a> |
-        <a href="https://youtube.com/@whiskeyandwasabi" target="_blank" rel="noopener">YouTube</a> |
+        <a href="https://instagram.com/geraldinemontellanos" target="_blank" rel="noopener">Instagram</a>
+        <span class="divider">|</span>
         <a href="https://www.linkedin.com/in/geraldine-montellanos-722b462b3" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
+    <!-- Services -->
+    <section class="services" id="services">
       <div class="services-container">
-        <h2 class="welcome">Content Strategy, Simplified</h2>
-
+        <h2 class="section-title">Content Strategy, Simplified</h2>
         <p class="paragraph subtext">
           Clear direction for content that connects, resonates, and performs.
         </p>
 
         <div class="packages">
+
           <!-- Box 1 -->
           <div class="package highlight">
             <div class="badge">Most Popular</div>
             <h3>Creative Strategy Audit</h3>
-
             <p>
               Clarity for your content. Direction backed by insight.<br>
-              I review your content, audience, and positioning to uncover what’s working,
-              what’s not, and what to do next.
+              I review your content, audience, and positioning to uncover what's working,
+              what's not, and what to do next.
             </p>
-
-            <p>
+            <p class="checklist">
               ✔ content audit + insights<br>
               ✔ audience clarity<br>
               ✔ hooks + content direction<br>
               ✔ 2-week content plan
             </p>
-
-            <p class="package-note">
-              Starting at $250 — strategic, clear, and tailored to your brand.
-            </p>
+            <p class="package-note">Starting at $250 — strategic, clear, and tailored to your brand.</p>
           </div>
 
           <!-- Box 2 -->
           <div class="package">
             <h3>30-Day Content Starter Plan</h3>
-
             <p>
               A simple, strategic starting point for brands that need direction before
               they create more content.
             </p>
-
-            <p>
+            <p class="checklist">
               ✔ clear audience + messaging<br>
               ✔ 30-day content plan (12–16 posts)<br>
               ✔ AI prompts to execute
             </p>
-
-            <p class="package-note">
-              Starting at $250 — practical direction you can actually use.
-            </p>
-
+            <p class="package-note">Starting at $250 — practical direction you can actually use.</p>
             <div class="package-buttons">
-              <a
-                href="https://forms.gle/4HX5rk4W6iGX9PcTA"
-                target="_blank"
-                rel="noopener"
-                class="btn-primary"
-              >
-                Start Here
-              </a>
+              <a href="https://forms.gle/4HX5rk4W6iGX9PcTA" target="_blank" rel="noopener" class="btn-package-primary">Start Here</a>
             </div>
           </div>
 
           <!-- Box 3 -->
           <div class="package">
             <h3>Strategy in Action</h3>
-
             <p>
               Real examples of audience research, creative direction, and strategic
               thinking in practice.
             </p>
-
             <div class="package-buttons">
-              <a href="pretty-litter.html" class="btn-secondary">PrettyLitter Audit</a>              <a href="case-study.html" class="btn-secondary">Whiskey &amp; Wasabi</a>              <a
-                href="https://forms.gle/uVd5QnZuafFzriWk8"
-                target="_blank"
-                rel="noopener"
-                class="btn-primary"
-              >
-                Start Your Audit
-              </a>
+              <a href="pretty-litter.html" class="btn-package-secondary">PrettyLitter Audit</a>
+              <a href="case-study.html" class="btn-package-secondary">Whiskey &amp; Wasabi</a>
+              <a href="https://forms.gle/uVd5QnZuafFzriWk8" target="_blank" rel="noopener" class="btn-package-primary">Start Your Audit</a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -175,7 +168,6 @@
     <p>Designed and coded by Geraldine 🤍</p>
   </footer>
 
-  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
