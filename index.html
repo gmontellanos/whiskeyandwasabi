@@ -38,7 +38,11 @@
 </head>
 
 <body>
-
+  <div class="page-loader" id="pageLoader">
+    <p class="loader-logo">Whiskey &amp; Wasabi</p>
+    <div class="loader-line"></div>
+    <p class="loader-tagline">Content Strategy &amp; Web Design</p>
+  </div>
   <!-- Nav -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">Whiskey &amp; Wasabi</a>
@@ -108,7 +112,12 @@
         <a href="https://www.linkedin.com/in/geraldine-montellanos-722b462b3" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
-
+    <div class="quote-strip">
+      <blockquote>
+        "Your content should feel like <em>you</em> — warm, intentional,<br>and worth stopping for."
+      </blockquote>
+      <cite>— Whiskey &amp; Wasabi</cite>
+    </div>
     <!-- Services -->
     <section class="services" id="services">
       <div class="services-container">
@@ -235,6 +244,10 @@
     <!-- Testimonials -->
     <section class="box" id="testimonials">
       <h2 class="welcome">Words that genuinely make my day.</h2>
+      <div class="pull-quote">
+        <p>"Everything was organized and explained in a way that made it <em>actionable and easy to understand</em> step-by-step."</p>
+        <span class="pull-quote-attr">— Claudia Pugay, Cloudy to Clear</span>
+      </div>
       <div class="testimonial-grid">
 
         <div class="testimonial-card">
@@ -318,5 +331,13 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('pageLoader');
+      setTimeout(function() {
+        loader.classList.add('hidden');
+      }, 1400);
+    });
+  </script>
 </body>
 </html>
