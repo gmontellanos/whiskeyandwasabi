@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S310H4D9G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5S310H4D9G');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Whiskey &amp; Wasabi | Content Strategy &amp; Web Design</title>
+  <meta name="description" content="Warm, practical insights on content strategy, Instagram bios, web design, and showing up online with confidence — from Geraldine Montellanos at Whiskey & Wasabi in Sacramento, CA.">
+  <meta name="keywords" content="content strategy blog, Instagram bio tips, small business marketing Sacramento, web design tips, content strategy Sacramento, social media strategy blog">
+  <meta name="author" content="Geraldine Montellanos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://whiskeyandwasabi.com/blog/">
+
+  <meta property="og:title" content="Blog — Whiskey &amp; Wasabi">
+  <meta property="og:description" content="Warm, practical insights on content strategy, web design, and showing up online with confidence.">
+  <meta property="og:image" content="https://whiskeyandwasabi.com/images/geraldine.jpg">
+  <meta property="og:url" content="https://whiskeyandwasabi.com/blog/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../css/master.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="../images/favicon.png" type="image/png">
+
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 32px;
+    }
+
+    .blog-card {
+      background: #FDFAF4;
+      border: 1px solid rgba(122,144,80,0.14);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: 0 2px 12px rgba(26,36,16,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(26,36,16,0.1);
+      border-color: rgba(122,144,80,0.3);
+    }
+
+    .blog-card-category {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--honey);
+    }
+
+    .blog-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.3;
+      letter-spacing: 0.2px;
+    }
+
+    .blog-card-excerpt {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text);
+      flex: 1;
+    }
+
+    .blog-card-meta {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .blog-card-meta::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: var(--sage);
+    }
+
+    .blog-read-more {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="../" class="nav-logo">Whiskey &amp; Wasabi</a>
+    <ul class="nav-links">
+      <li><a href="../#services">Services</a></li>
+      <li><a href="../#work">Work</a></li>
+      <li><a href="../websites/">Websites</a></li>
+      <li><a href="../blog/" style="opacity:1; color:var(--sage-dark);">Blog</a></li>
+      <li><a href="../#welcome">About</a></li>
+    </ul>
+    <a href="https://forms.gle/ZJWmmA3vGbg9NNjC9" target="_blank" rel="noopener" class="nav-cta">Let's Take a Look</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="inner-hero">
+    <div class="inner-hero-content">
+      <div class="tag-pill">
+        <span class="dot"></span> The Blog
+      </div>
+      <h1 class="inner-title">For the business owner who just wants it to <em>feel easier.</em></h1>
+      <p class="inner-subtitle">A cozy corner for content strategy, web design, and showing up online.</p>    </div>
+  </header>
+
+  <main class="main">
+    <section class="box">
+      <div class="blog-grid">
+
+        <a href="how-to-write-instagram-bio.html" class="blog-card">
+          <p class="blog-card-category">Instagram · Bio Optimization</p>
+          <h2 class="blog-card-title">How to Write an Instagram Bio That Actually Gets You Clients</h2>
+          <p class="blog-card-excerpt">Most Instagram bios say what you do. The best ones make the right person feel like they finally found exactly who they were looking for. Here's the difference — and how to get there.</p>
+          <p class="blog-card-meta">Geraldine Montellanos · June 2025</p>
+          <p class="blog-read-more">Read more →</p>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-name">Whiskey &amp; Wasabi LLC</p>
+        <p class="footer-tagline">Strategy and design for businesses that want to feel good online.</p>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:info@whiskeyandwasabi.com">info@whiskeyandwasabi.com</a>
+        <a href="tel:9165620734">916-562-0734</a>
+      </div>
+      <div class="footer-links-row">
+        <a href="https://instagram.com/geraldinemontellanos" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/geraldine-montellanos-722b462b3" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../blog/">Blog</a>
+      </div>
+    </div>
+    <p class="footer-credit">Designed and coded by Geraldine 🤍</p>
+  </footer>
+
+</body>
+</html>

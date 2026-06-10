@@ -461,6 +461,11 @@ body::before {
   margin-bottom: 14px;
 }
 
+.inner-title em {
+  font-style: italic;
+  color: var(--honey);
+}
+
 .inner-subtitle {
   font-size: 13px;
   font-weight: 300;
