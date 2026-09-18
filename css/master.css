@@ -1623,3 +1623,74 @@ body::before {
   .hero-buttons { flex-direction: column; align-items: center; }
   .package-buttons { flex-direction: column; align-items: center; }
   .footer { padding: 20px 12px; }
+}
+
+/* -----------------------------
+   Contact Form (EmailJS)
+----------------------------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 560px;
+  margin: 32px auto 0;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 18px;
+}
+
+.contact-form .form-row .form-group {
+  flex: 1;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--sage);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+  align-self: flex-start;
+}
+
+.form-status {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.form-status.success { color: var(--sage-dark); }
+.form-status.error { color: #a8453a; }
+
+@media (max-width: 600px) {
+  .contact-form .form-row { flex-direction: column; }
+}

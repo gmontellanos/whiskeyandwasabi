@@ -41,7 +41,7 @@
       <li><a href="../#welcome">About</a></li>
       <li><a href="../blog/">Blog</a></li>
     </ul>
-    <a href="https://forms.gle/fiYd9ezfYjdfLGPB8" target="_blank" rel="noopener" class="nav-cta">Get a Quote</a>
+    <a href="#quote-form" class="nav-cta">Get a Quote</a>
   </nav>
 
   <!-- Hero -->
@@ -51,7 +51,7 @@
         <span class="dot"></span> Custom Web Design
       </div>
       <h1 class="inner-title">A boutique web design studio<br>for service businesses that<br><em>refuse to look ordinary.</em></h1>      <div class="hero-buttons">
-        <a href="https://forms.gle/fiYd9ezfYjdfLGPB8" target="_blank" rel="noopener" class="btn-primary">Get a Quote</a>
+        <a href="#quote-form" class="btn-primary">Get a Quote</a>
         <a href="../#services" class="btn-ghost">View Strategy Services →</a>
       </div>
       <p class="hero-note">
@@ -246,10 +246,35 @@
         <p>Start with a quick quote request — just a few questions about your project, timeline, and budget. No commitment, no pressure. Just a conversation about what you need.</p>
         <p><em>Most projects launch within 3–5 weeks from the first call.</em></p>
       </div>
-      <div class="package-buttons" style="margin-top:28px;">
-        <a href="https://forms.gle/fiYd9ezfYjdfLGPB8" target="_blank" rel="noopener" class="cta-button">Get a Quote</a>
-        <a href="mailto:info@whiskeyandwasabi.com?subject=Website%20Project" class="btn-secondary">Send a Message</a>
-      </div>
+
+      <form id="quote-form" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from_name">Name</label>
+            <input type="text" id="from_name" name="from_name" required>
+          </div>
+          <div class="form-group">
+            <label for="from_email">Email</label>
+            <input type="email" id="from_email" name="from_email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell me about your project</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <input type="hidden" name="source_page" value="Websites Page">
+
+        <button type="submit" class="cta-button">Send</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+
       <p class="hero-note" style="text-align:center; margin-top:16px;">
         Or call directly: <a href="tel:9165620734">916-562-0734</a>
       </p>
@@ -275,6 +300,44 @@
     </div>
     <p class="footer-credit">Designed and coded by Geraldine 🤍</p>
   </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({ publicKey: "tVDnO2agpiWzi1n9z" });
+
+      const form = document.getElementById('quote-form');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const btn = form.querySelector('button[type="submit"]');
+        const status = document.getElementById('form-status');
+
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        status.textContent = '';
+        status.className = 'form-status';
+
+        emailjs.sendForm('service_ogcrk5n', 'template_vcwqy0m', form).then(
+          function () {
+            status.textContent = "Thanks, I've got your message and will be in touch soon.";
+            status.classList.add('success');
+            form.reset();
+            btn.textContent = 'Send';
+            btn.disabled = false;
+          },
+          function (error) {
+            status.textContent = "Something went wrong. Please try emailing info@whiskeyandwasabi.com directly.";
+            status.classList.add('error');
+            btn.textContent = 'Send';
+            btn.disabled = false;
+          }
+        );
+      });
+    })();
+  </script>
 
   <script src="../js/main.js"></script>
 </body>
