@@ -1,44 +1,253 @@
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
-  emailjs.init({
-    publicKey: "tVDnO2agpiWzi1n9z"
-  });
+  <title>DJ Ergonomix | Song Request</title>
 
-  const form = document.getElementById("song-request-form");
-  const status = document.getElementById("status");
-  const button = document.getElementById("submit-button");
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    button.disabled = true;
-    button.textContent = "SENDING...";
-    status.textContent = "";
+      padding: 24px;
 
-    emailjs.sendForm(
-      "service_oidclr7",
-      "template_gpg14zx",
-      form
-    )
-    .then(function() {
-      status.textContent = "Request sent! 🎶";
-      form.reset();
+      font-family: Arial, Helvetica, sans-serif;
 
-      button.disabled = false;
-      button.textContent = "SEND ANOTHER REQUEST 🎧";
-    })
-    .catch(function(error) {
-      console.error("EmailJS error:", error);
+      background: #111;
+      color: #fff;
+    }
 
-      status.textContent =
-        "Error " +
-        (error.status || "") +
-        ": " +
-        (error.text || "Something went wrong.");
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
 
-      button.disabled = false;
-      button.textContent = "SEND REQUEST 🎶";
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 34px;
+      font-size: 1.05rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 0.95rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+
+      font-size: 16px;
+
+      background: #1c1c1c;
+      color: #fff;
+
+      border: 1px solid #444;
+      border-radius: 10px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #fff;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 18px;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      background: #fff;
+      color: #111;
+
+      border: none;
+      border-radius: 10px;
+
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #status {
+      margin-top: 22px;
+      min-height: 24px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.78rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <main class="container">
+
+    <h1>DJ ERGONOMIX 🎧</h1>
+
+    <p class="subtitle">
+      Drop your song request below.
+    </p>
+
+
+    <form id="song-request-form">
+
+      <div>
+        <label for="name">Your Name</label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          maxlength="50"
+          required
+        >
+      </div>
+
+
+      <div>
+        <label for="song">Song</label>
+
+        <input
+          type="text"
+          id="song"
+          name="song"
+          placeholder="Song title"
+          maxlength="100"
+          required
+        >
+      </div>
+
+
+      <div>
+        <label for="artist">Artist</label>
+
+        <input
+          type="text"
+          id="artist"
+          name="artist"
+          placeholder="Artist name"
+          maxlength="100"
+          required
+        >
+      </div>
+
+
+      <button type="submit" id="submit-button">
+        SEND REQUEST 🎶
+      </button>
+
+    </form>
+
+
+    <p id="status"></p>
+
+
+    <p class="footer">
+      Song requests are not guaranteed.
+    </p>
+
+  </main>
+
+
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+  <script>
+
+    emailjs.init({
+      publicKey: "tVDnO2agpiWzi1n9z"
     });
-  });
-</script>
+
+
+    const form = document.getElementById("song-request-form");
+    const status = document.getElementById("status");
+    const button = document.getElementById("submit-button");
+
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      button.disabled = true;
+      button.textContent = "SENDING...";
+
+      status.textContent = "";
+
+
+      emailjs.sendForm(
+        "service_oidclr7",
+        "template_gpg14zx",
+        form
+      )
+
+      .then(function() {
+
+        status.textContent = "Request sent! 🎶";
+
+        form.reset();
+
+        button.disabled = false;
+        button.textContent = "SEND ANOTHER REQUEST 🎧";
+
+      })
+
+      .catch(function(error) {
+
+        console.error("EmailJS error:", error);
+
+        status.textContent =
+          "Error " +
+          (error.status || "") +
+          ": " +
+          (error.text || "Something went wrong. Please try again.");
+
+        button.disabled = false;
+        button.textContent = "SEND REQUEST 🎶";
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
