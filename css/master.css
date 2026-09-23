@@ -1504,7 +1504,9 @@ body::before {
   max-width: 200px;
 }
 
-.footer-contact { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.footer-contact { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+.footer-divider { color: var(--card-border); }
 
 .footer-contact a {
   font-size: 11px;
@@ -1587,7 +1589,7 @@ body::before {
   .web-design-inner { grid-template-columns: 1fr; gap: 24px; }
   .price-block { width: 100%; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .footer-contact { align-items: flex-start; }
+  .footer-contact { justify-content: flex-start; }
   .testimonial-grid { grid-template-columns: 1fr; }
   .testimonial-grid .testimonial-card:last-child:nth-child(odd) { max-width: 100%; }
   .packages { grid-template-columns: 1fr; }
@@ -1798,12 +1800,12 @@ body::before {
 }
 
 @media (max-width: 900px) {
-  .nav-toggle {
-    display: block;
+  .nav-cta {
     order: 2;
   }
 
-  .nav-cta {
+  .nav-toggle {
+    display: block;
     order: 3;
   }
 
