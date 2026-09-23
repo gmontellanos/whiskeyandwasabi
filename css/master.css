@@ -1729,7 +1729,7 @@ body::before {
    Nav Logo Image
 ----------------------------- */
 .nav-logo img {
-  height: 34px;
+  height: 46px;
   display: block;
 }
 
@@ -1763,3 +1763,76 @@ body::before {
 }
 
 .case-block + .case-block { margin-top: 8px; }
+
+/* -----------------------------
+   Mobile Nav Toggle (Hamburger)
+----------------------------- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 6px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--dark);
+  margin: 5px 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .nav-cta {
+    order: 3;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid rgba(122, 144, 80, 0.15);
+    box-shadow: var(--shadow-sm);
+    padding: 8px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    opacity: 0.75;
+  }
+}
