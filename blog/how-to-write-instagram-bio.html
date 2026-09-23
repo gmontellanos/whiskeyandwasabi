@@ -15,11 +15,15 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "How to Write an Instagram Bio That Actually Gets You Clients",
-    "description": "Most Instagram bios say what you do. The best ones make the right person feel like they finally found exactly who they were looking for. Here's the difference — and how to get there.",
+    "description": "Most Instagram bios say what you do. The best ones make the right person feel like they finally found exactly who they were looking for. Here's the difference, and how to get there.",
     "author": {
       "@type": "Person",
       "name": "Geraldine Montellanos",
-      "url": "https://whiskeyandwasabi.com"
+      "url": "https://whiskeyandwasabi.com",
+      "sameAs": [
+        "https://instagram.com/geraldinemontellanos",
+        "https://www.linkedin.com/in/geraldine-montellanos-722b462b3"
+      ]
     },
     "publisher": {
       "@type": "Organization",
@@ -27,17 +31,18 @@
       "url": "https://whiskeyandwasabi.com"
     },
     "datePublished": "2025-06-01",
+    "dateModified": "2026-09-23",
     "url": "https://whiskeyandwasabi.com/blog/how-to-write-instagram-bio.html",
     "image": "https://whiskeyandwasabi.com/images/geraldine.jpg",
-    "keywords": "Instagram bio, how to write Instagram bio, Instagram bio for small business, content strategy, Sacramento content strategist"
+    "keywords": "Instagram bio, how to write Instagram bio, Instagram bio for small business, Instagram bio tips"
   }
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Write an Instagram Bio That Actually Gets You Clients — Whiskey &amp; Wasabi</title>
-  <meta name="description" content="Most Instagram bios say what you do. The best ones make the right person feel like they finally found exactly who they were looking for. Here's the difference — and how to get there.">
-  <meta name="keywords" content="how to write Instagram bio, Instagram bio for small business, Instagram bio tips, content strategy Sacramento, Instagram bio that gets clients">
+  <title>How to Write an Instagram Bio That Actually Gets You Clients | Whiskey &amp; Wasabi</title>
+  <meta name="description" content="Most Instagram bios say what you do. The best ones make the right person feel like they finally found exactly who they were looking for. Here's the difference, and how to get there.">
+  <meta name="keywords" content="how to write Instagram bio, Instagram bio for small business, Instagram bio tips, Instagram bio that gets clients">
   <meta name="author" content="Geraldine Montellanos">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://whiskeyandwasabi.com/blog/how-to-write-instagram-bio.html">
@@ -53,6 +58,15 @@
   <link rel="icon" href="../images/favicon.png" type="image/png">
 
   <style>
+    /* 2026 palette, no pinks */
+    .post-page {
+      --p-dark: #2C2825;
+      --p-sage-dark: #4a6632;
+      --p-sage: #7A9050;
+      --p-off-white: #FAF8F5;
+      --p-text: #6B6260;
+    }
+
     .post-header {
       max-width: 720px;
       margin: 0 auto;
@@ -63,9 +77,9 @@
     .post-category {
       font-size: 9px;
       font-weight: 500;
-      letter-spacing: 3px;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
-      color: var(--honey);
+      color: var(--p-sage-dark);
       margin-bottom: 20px;
       display: block;
     }
@@ -74,14 +88,14 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(32px, 4vw, 52px);
       font-weight: 300;
-      color: var(--dark);
+      color: var(--p-dark);
       line-height: 1.15;
       letter-spacing: -0.3px;
       margin-bottom: 20px;
     }
 
     .post-title em {
-      color: var(--honey);
+      color: var(--p-sage-dark);
       font-style: italic;
     }
 
@@ -89,7 +103,7 @@
       font-size: 11px;
       font-weight: 300;
       letter-spacing: 1px;
-      color: var(--muted);
+      color: var(--p-text);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,7 +116,7 @@
       display: block;
       width: 24px;
       height: 1px;
-      background: var(--sage);
+      background: var(--p-sage);
     }
 
     .post-body {
@@ -111,19 +125,43 @@
       padding: 0 40px 60px;
     }
 
-    .post-body p {
+    .post-body p,
+    .post-body li {
       font-size: 1rem;
       font-weight: 300;
       line-height: 1.9;
-      color: var(--text);
-      margin-bottom: 1.6rem;
+      color: var(--p-text);
+    }
+
+    .post-body p { margin-bottom: 1.6rem; }
+
+    .post-body ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.6rem;
+    }
+
+    .post-body li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 0.9rem;
+    }
+
+    .post-body li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85em;
+      width: 10px;
+      height: 1px;
+      background: var(--p-sage);
     }
 
     .post-body h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
       font-weight: 400;
-      color: var(--dark);
+      color: var(--p-dark);
       margin: 48px 0 16px;
       letter-spacing: 0.3px;
     }
@@ -132,81 +170,48 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem;
       font-weight: 400;
-      color: var(--dark);
+      color: var(--p-dark);
       margin: 32px 0 12px;
       letter-spacing: 0.2px;
     }
 
     .post-body em {
       font-style: italic;
-      color: var(--honey);
+      color: var(--p-sage-dark);
     }
 
     .post-body strong {
       font-weight: 500;
-      color: var(--dark);
+      color: var(--p-dark);
     }
 
     .post-pullquote {
-      border-left: 2px solid var(--honey);
+      border-left: 2px solid var(--p-sage);
       padding: 16px 24px;
       margin: 36px 0;
-      background: rgba(176,136,32,0.05);
+      background: rgba(122,144,80,0.06);
       border-radius: 0 8px 8px 0;
     }
 
     .post-pullquote p {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-style: italic;
-      color: var(--dark);
+      color: var(--p-dark);
       margin-bottom: 0;
       line-height: 1.6;
-    }
-
-    .post-example {
-      background: #FDFAF4;
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-sm);
-      padding: 24px 28px;
-      margin: 28px 0;
-    }
-
-    .post-example .example-label {
-      font-size: 8px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .post-example p {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-
-    .post-example.better {
-      border-color: rgba(122,144,80,0.3);
-      background: rgba(122,144,80,0.04);
-    }
-
-    .post-example.better .example-label {
-      color: var(--sage-dark);
     }
 
     .post-divider {
       width: 60px;
       height: 1px;
-      background: linear-gradient(to right, var(--sage), var(--honey));
+      background: var(--p-sage);
       margin: 48px auto;
     }
 
     .post-cta {
-      background: #1a2410;
-      border-radius: var(--radius);
+      background: var(--p-dark);
+      border-radius: var(--radius, 16px);
       padding: 48px 40px;
       text-align: center;
       margin-top: 48px;
@@ -216,20 +221,15 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
       font-weight: 300;
-      color: #F8F4EC;
-      margin-bottom: 14px;
+      color: var(--p-off-white);
+      margin: 0 0 14px;
       letter-spacing: 0.3px;
-    }
-
-    .post-cta h3 em {
-      color: #D4A840;
-      font-style: italic;
     }
 
     .post-cta p {
       font-size: 0.9rem;
       font-weight: 300;
-      color: rgba(248,244,236,0.7);
+      color: rgba(250,248,245,0.75);
       margin-bottom: 28px;
       line-height: 1.75;
     }
@@ -242,28 +242,67 @@
       font-weight: 400;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--p-text);
       text-decoration: none;
       margin-bottom: 8px;
       transition: color 0.2s;
     }
 
-    .back-to-blog:hover { color: var(--sage-dark); }
+    .back-to-blog:hover { color: var(--p-sage-dark); }
     .back-to-blog::before { content: '←'; font-size: 12px; }
+
+    .post-body a:focus-visible,
+    .back-to-blog:focus-visible {
+      outline: 2px solid var(--p-sage-dark);
+      outline-offset: 3px;
+    }
 
     @media (max-width: 768px) {
       .post-header { padding: 40px 24px 32px; }
       .post-body { padding: 0 24px 40px; }
       .post-cta { padding: 36px 24px; }
     }
+  
+    .post-example {
+      background: var(--p-off-white);
+      border: 1px solid rgba(107,98,96,0.18);
+      border-radius: var(--radius-sm, 10px);
+      padding: 24px 28px;
+      margin: 28px 0;
+    }
+
+    .post-example .example-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--p-text);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .post-example p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .post-example.better {
+      border-color: rgba(122,144,80,0.35);
+      background: rgba(122,144,80,0.05);
+    }
+
+    .post-example.better .example-label { color: var(--p-sage-dark); }
+
+    .post-cta h3 em { color: inherit; font-style: italic; }
   </style>
 </head>
 
-<body>
+<body class="post-page">
 
   <!-- Nav -->
   <nav class="nav">
-    <a href="../" class="nav-logo">Whiskey &amp; Wasabi</a>
+    <a href="../" class="nav-logo"><img src="../images/logof8f4ec.png" alt="Whiskey &amp; Wasabi"></a>
     <ul class="nav-links">
       <li><a href="../#services">Services</a></li>
       <li><a href="../#work">Work</a></li>
@@ -271,7 +310,10 @@
       <li><a href="../blog/" style="opacity:1; color:var(--sage-dark);">Blog</a></li>
       <li><a href="../#welcome">About</a></li>
     </ul>
-    <a href="https://forms.gle/ZJWmmA3vGbg9NNjC9" target="_blank" rel="noopener" class="nav-cta">Let's Take a Look</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="../websites/#quote-form" class="nav-cta">Get a Quote</a>
   </nav>
 
   <main class="main" style="padding-top:0;">
@@ -289,7 +331,7 @@
 
       <p>Your Instagram bio has one job. Not to impress everyone. Not to explain your entire business. Its one job is to make the right person stop scrolling and think: <em>why didn't I find this sooner?</em></p>
 
-      <p>That feeling — relief, recognition, a little exhale — that's what a good bio creates. And most bios aren't doing it.</p>
+      <p>That feeling of relief, recognition, a little exhale, is what a good bio creates. And most bios aren't doing it.</p>
 
       <p>I've reviewed a lot of small business Instagram profiles, and the pattern is almost always the same. The bio is technically correct. It says what the person does, where they're located, maybe has a few emojis. But it doesn't feel like anyone. It could belong to a hundred different accounts in the same industry. And that's exactly the problem.</p>
 
@@ -299,17 +341,17 @@
 
       <p>The biggest bio mistake I see isn't bad writing. It's jumping straight to the call to action before earning any trust.</p>
 
-      <p>"Book now." "Shop the link." "DM to get started." These phrases show up in bios constantly — and they land on a complete stranger who has no idea why they should trust you yet.</p>
+      <p>"Book now." "Shop the link." "DM to get started." These phrases show up in bios constantly, and they land on a complete stranger who has no idea why they should trust you yet.</p>
 
       <p>Think about it from the other side. You land on someone's profile for the first time. You don't know them. And the first thing they say is "buy now." How does that feel?</p>
 
-      <p>A bio that leads with a CTA before building any connection is like handing someone a contract before you've introduced yourself. The sale might eventually happen — but not because of that bio.</p>
+      <p>A bio that leads with a CTA before building any connection is like handing someone a contract before you've introduced yourself. The sale might eventually happen, but not because of that bio.</p>
 
       <div class="post-pullquote">
         <p>"Your bio isn't a sales pitch. It's an introduction. And a good introduction makes someone feel seen before it asks them to do anything."</p>
       </div>
 
-      <h2>What your bio actually needs to do — in order</h2>
+      <h2>What your bio actually needs to do, in order</h2>
 
       <p>A bio that converts does four things, in this sequence:</p>
 
@@ -319,23 +361,23 @@
 
       <h3>2. Show them something that makes you different</h3>
 
-      <p>This is the line that makes someone stop. It's the thing that separates you from every other account in your category. For one client I worked with, that line was "real-life organizing — not Pinterest perfection." Six words. But they immediately signal: this person gets it. She's not going to make me feel bad about my mess.</p>
+      <p>This is the line that makes someone stop. It's the thing that separates you from every other account in your category. For one client I worked with, that line was "real-life organizing, not Pinterest perfection." Six words. But they immediately signal: this person gets it. She's not going to make me feel bad about my mess.</p>
 
       <p>Your differentiator doesn't have to be dramatic. It just has to be real and specific to you.</p>
 
       <h3>3. Give them a reason to trust you</h3>
 
-      <p>This is where credentials, memberships, and social proof earn their place. Not as a brag — as a reassurance. If you're a NAPO-certified organizer, say so. If you've helped fifty clients, hint at it. If you've been featured somewhere relevant, mention it. Your ideal client is already wondering if you're legit. Your bio can answer that question before they even have to ask.</p>
+      <p>This is where credentials, memberships, and social proof earn their place. Not as a brag, but as a reassurance. If you're a NAPO-certified organizer, say so. If you've helped fifty clients, hint at it. If you've been featured somewhere relevant, mention it. Your ideal client is already wondering if you're legit. Your bio can answer that question before they even have to ask.</p>
 
-      <h3>4. Then — and only then — give them a next step</h3>
+      <h3>4. Then, and only then, give them a next step</h3>
 
-      <p>Once you've made them feel seen, once you've shown them what makes you different, once you've given them a reason to trust you — now a CTA lands. "Free 15-min call — link below" feels like a warm invitation at that point, not a cold pitch. The same words, completely different context.</p>
+      <p>Once you've made them feel seen, shown them what makes you different, and given them a reason to trust you, a CTA lands. "Free 15-min call, link below" feels like a warm invitation at that point, not a cold pitch. The same words, completely different context.</p>
 
       <div class="post-divider"></div>
 
       <h2>A real before and after</h2>
 
-      <p>Here's what this looks like in practice. I worked with a professional organizer in the SF Bay Area whose bio wasn't wrong — it just wasn't her.</p>
+      <p>Here's what this looks like in practice. I worked with a professional organizer in the SF Bay Area whose bio wasn't wrong. It just wasn't her.</p>
 
       <div class="post-example">
         <span class="example-label">Before</span>
@@ -344,24 +386,24 @@
         🏠 Transforming cluttered spaces into organized havens</p>
       </div>
 
-      <p>Three identical house emojis. Generic phrases that appear in almost every organizer's bio. No personality, no credentials, no differentiator — and a misspelling in the name field showing up in Google search results.</p>
+      <p>Three identical house emojis. Generic phrases that appear in almost every organizer's bio. No personality, no credentials, no differentiator. Plus a misspelling in the name field showing up in Google search results.</p>
 
       <div class="post-example better">
         <span class="example-label">After</span>
         <p>📍 SF Bay Area · San Mateo · East Bay<br>
-        ✨ Real-life organizing — not Pinterest perfection<br>
+        ✨ Real-life organizing, not Pinterest perfection<br>
         🤝 Judgment-free help for busy pros &amp; families<br>
         📞 Free 15-min call → link below<br>
         <em>NAPO Member</em></p>
       </div>
 
-      <p>Same person. Same service. But now it feels like her. The differentiator is in the first line they read. The credential is visible. The CTA is there — but it comes after she's already made you feel understood. And "judgment-free" speaks directly to the fear that was keeping her ideal client from reaching out in the first place.</p>
+      <p>Same person. Same service. But now it feels like her. The differentiator is in the first line they read. The credential is visible. The CTA is there, but it comes after she's already made you feel understood. And "judgment-free" speaks directly to the fear that was keeping her ideal client from reaching out in the first place.</p>
 
-      <p>That one word — judgment-free — is doing more work than the entire previous bio combined.</p>
+      <p>That one word, judgment-free, is doing more work than the entire previous bio combined.</p>
 
       <div class="post-divider"></div>
 
-      <h2>Before you rewrite your bio — one question</h2>
+      <h2>Before you rewrite your bio, one question</h2>
 
       <p>What is the thing your ideal client is most afraid of when they think about working with someone like you? What's the quiet hesitation, the thing they'd never say out loud but is definitely there?</p>
 
@@ -377,11 +419,11 @@
 
       <p>Run your bio through these before you publish:</p>
 
-      <p>✔ Does it say who specifically you help — not just what you do?<br>
+      <p>✔ Does it say who specifically you help, not just what you do?<br>
       ✔ Is there one line that feels genuinely like you and nobody else?<br>
       ✔ Does it address a real fear or frustration your ideal client has?<br>
       ✔ Have you added a credential or trust signal if you have one?<br>
-      ✔ Is the CTA the last thing they read — not the first?<br>
+      ✔ Is the CTA the last thing they read, not the first?<br>
       ✔ Could this bio belong to someone else in your industry? If yes, rewrite it.</p>
 
       <p>Your bio is 150 characters. Every single one should be earning its place.</p>
@@ -389,8 +431,8 @@
       <!-- CTA -->
       <div class="post-cta">
         <h3>Want someone to do this <em>for</em> you?</h3>
-        <p>Bio and profile optimization is one of my favorite services — because the difference a rewrite makes is immediate and real. I review your current bio, your Google Business Profile, and your ideal client, then deliver copy-paste ready rewrites with a full issue-by-issue breakdown. Delivered in 48 hours for $97.</p>
-        <a href="https://forms.gle/pCAesGhUM1mY4GKF7" target="_blank" rel="noopener" class="btn-primary">Let's Refresh It →</a>
+        <p>Bio and profile optimization is one of my favorite services, because the difference a rewrite makes is immediate and real. I review your current bio, your Google Business Profile, and your ideal client, then deliver copy-paste ready rewrites with a clear breakdown of what's holding you back. Delivered in 48 hours.</p>
+        <a href="../content-strategy/" class="btn-primary">Let's Refresh It</a>
       </div>
 
     </div>
@@ -401,7 +443,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <p class="footer-name">Whiskey &amp; Wasabi LLC</p>
-        <p class="footer-tagline">Strategy and design for businesses that want to feel good online.</p>
+        <p class="footer-tagline">Custom Web Design Studio</p>
       </div>
       <div class="footer-contact">
         <a href="mailto:info@whiskeyandwasabi.com">info@whiskeyandwasabi.com</a>
@@ -411,10 +453,12 @@
         <a href="https://instagram.com/geraldinemontellanos" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.linkedin.com/in/geraldine-montellanos-722b462b3" target="_blank" rel="noopener">LinkedIn</a>
         <a href="../blog/">Blog</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
       </div>
     </div>
     <p class="footer-credit">Designed and coded by Geraldine 🤍</p>
   </footer>
 
+  <script src="../js/main.js"></script>
 </body>
 </html>
