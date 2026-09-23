@@ -526,6 +526,9 @@
             form.reset();
             btn.textContent = 'Send';
             btn.disabled = false;
+            if (typeof gtag === 'function') {
+              gtag('event', 'form_submission', { form_name: 'websites_quote_form' });
+            }
           },
           function (error) {
             status.textContent = "Something went wrong. Please try emailing info@whiskeyandwasabi.com directly.";
