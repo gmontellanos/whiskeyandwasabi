@@ -4,29 +4,56 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://whiskeyandwasabi.com/</loc>
-  <lastmod>2026-04-29T20:48:14+00:00</lastmod>
+  <lastmod>2026-09-23</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://whiskeyandwasabi.com/pretty-litter.html</loc>
-  <lastmod>2026-04-29T20:48:14+00:00</lastmod>
+  <loc>https://whiskeyandwasabi.com/websites/</loc>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://whiskeyandwasabi.com/websites/south-shore-construction.html</loc>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://whiskeyandwasabi.com/websites/steam-and-hot-water.html</loc>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://whiskeyandwasabi.com/websites/cloudy-to-clear.html</loc>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://whiskeyandwasabi.com/content-strategy/</loc>
+  <lastmod>2026-09-23</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://whiskeyandwasabi.com/case-study.html</loc>
-  <lastmod>2026-04-29T20:48:14+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.60</priority>
 </url>
 <url>
-  <loc>https://whiskeyandwasabi.com/index.html</loc>
-  <lastmod>2026-04-29T20:48:14+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://whiskeyandwasabi.com/blog/</loc>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.70</priority>
 </url>
-
+<url>
+  <loc>https://whiskeyandwasabi.com/blog/how-to-write-instagram-bio.html</loc>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://whiskeyandwasabi.com/privacy-policy/</loc>
+  <lastmod>2026-09-23</lastmod>
+  <priority>0.30</priority>
+</url>
 
 </urlset>

@@ -1378,6 +1378,7 @@ body::before {
 }
 
 .preview-placeholder-text {
+  display: none;
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
@@ -1388,6 +1389,10 @@ body::before {
   text-align: center;
   padding: 20px;
   white-space: nowrap;
+}
+
+.portfolio-preview.preview-placeholder .preview-placeholder-text {
+  display: block;
 }
 
 .portfolio-info {
@@ -1694,3 +1699,67 @@ body::before {
 @media (max-width: 600px) {
   .contact-form .form-row { flex-direction: column; }
 }
+
+/* -----------------------------
+   Single Card Services (Homepage)
+----------------------------- */
+.packages.single-package {
+  grid-template-columns: 1fr;
+  max-width: 460px;
+  margin: 8px auto 0;
+}
+
+.services-secondary-link {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.services-secondary-link a {
+  color: var(--sage-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.services-secondary-link a:hover { color: var(--honey); }
+
+/* -----------------------------
+   Nav Logo Image
+----------------------------- */
+.nav-logo img {
+  height: 34px;
+  display: block;
+}
+
+/* -----------------------------
+   Contact Form Select (Content Strategy form)
+----------------------------- */
+.contact-form select {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s;
+}
+
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--sage);
+}
+
+/* -----------------------------
+   Case Study Situation/Build/Result blocks
+----------------------------- */
+.case-block {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.case-block + .case-block { margin-top: 8px; }
